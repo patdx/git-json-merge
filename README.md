@@ -1,3 +1,5 @@
+# git-json-merge
+
 A git merge driver that automatically resolves merge conflicts in JSON files. It
 detects indentation automatically and performs a three-way merge. This fork adds
 support for reading JSONC (JSON with Comments) files, although comments are not
@@ -54,7 +56,7 @@ deno run --allow-read --allow-write jsr:@patdx/git-json-merge ours.json base.jso
 You can also use the merge functionality in your own code:
 
 ```typescript
-import { mergeJson, mergeJsonFiles } from 'jsr:@patdx/git-json-merge'
+import { mergeJson, mergeJsonFiles } from 'jsr:@patdx/git-json-merge/lib'
 
 // Merge files
 await mergeJsonFiles('ours.json', 'base.json', 'theirs.json')
